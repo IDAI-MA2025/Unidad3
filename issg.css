@@ -1,0 +1,72 @@
+
+body{
+    color: black;
+    background: white;
+}
+
+.grid{
+    width: 90%;
+    max-width: 100%;
+    margin: 30px auto;
+
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+
+    grid-template-areas: "header        header      header"
+                         "Contenido     Contenido       Sidebar"
+                         "Wigedt1       Widget2     Sidebar"
+                         "Footer        Footer      Footer";
+    }
+    
+    .grid div,
+    .grid header,
+    .grid aside,
+    .grid footer{
+        background: white;
+        padding: 20px;
+    }
+
+    .grid header{
+        background: gray;
+        color: white;
+    }
+
+    .grid contenido{
+        grid-area: contenido;
+    }
+
+    .grid aside{
+        background: pink;
+        color: white;
+        grid-area: sidebar;
+    }
+
+    .grid .widget{
+        background: lightblue;
+        color: white;
+    }
+
+    .grid .w1{
+        grid-area: widget1;
+    }
+
+    .grid .w2{
+        grid-area: widget2;
+    }
+
+    .grid footer{
+        background: white;
+        color: black;
+        grid-area: footer;
+    }
+
+    @media screen and (max-width: 700px) {
+        .grid{
+                grid-template-areas: "header        header      header"
+                         "Contenido     Contenido       Sidebar"
+                         "Wigedt1       Widget2     Sidebar"
+                         "Footer        Footer      Footer";}
+    
+    }
