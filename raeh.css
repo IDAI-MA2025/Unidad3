@@ -1,6 +1,7 @@
-body{   
+
+body{
     color: black;
-    background-color: white;
+    background: white;
 }
 
 .grid{
@@ -9,68 +10,71 @@ body{
     margin: 30px auto;
 
     display: grid;
-    grid-gap:20px;
+    grid-gap: 20px;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4,auto);
+    grid-template-rows: repeat(4, auto);
 
-    grid-template-areas: "header     header       header"
-                         "contenido  contenido    sidebar"
-                         "widget1    widget2      sidebar"
-                         "footer     footer       footer";
+    grid-template-areas: "header    header      header"
+                         "contenido contenido   sidebar"
+                         "widget1   widget2     sidebar"
+                         "footer    footer      footer";
+    
+                        
     }
 
-    .grid div, 
+    .grid div,
     .grid header,
     .grid aside,
-    .grid footer {
-        background: lightgray;
+    .grid footer{
+        background: white;
         padding: 20px;
-
     }
 
-    .grid header {
-        background: grey ;
+    .grid header{
+        background: grey;
         color: white;
         grid-area: header;
     }
 
-    .grid .contenido {
+    .grid contenido{
         grid-area: contenido;
     }
 
-    .grid .aside {
-        background: rgb(237, 44, 166);
+    .grid aside{
+        background: pink;
         color: white;
         grid-area: sidebar;
     }
 
     .grid .widget{
-        background-color: lightblue;
+        background: lightblue;
         color: white;
-        
     }
 
-    .grid .w1 {
+    .grid .w1{
         grid-area: widget1;
     }
 
-    .grid .w2 {
+     .grid .w2{
         grid-area: widget2;
     }
 
-    .grid .footer {
+    .grid footer{
         background: black;
         color: white;
         grid-area: footer;
     }
 
-    @media screen and (max-width: 700px) 
+
+    @media screen and (max-width:700px) 
     {
         .grid{
-             grid-template-areas: "header     header       header"
-                         "contenido  contenido    contenido"
-                         "sidebar   sidebar      sidebar"
-                         "widget1    widget1      widget2"
-                         "footer     footer       footer";
+            grid-template-areas: "header    header      header"
+                         "contenido contenido   contenido"
+                         "sidebar sidebar   sidebar"
+                         "widget1   widget1     widget2"
+                         "footer    footer      footer";
+    
+                        
         }
     }
